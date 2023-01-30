@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Arabic",
+    "code": "ar",
+    "native_name": "العربية",
+    "id": 1
+  },
+  {
+    "name": "English",
+    "code": "en",
+    "native_name": "English",
+    "id": 2
+  },
+  {
+    "name": "French",
+    "code": "fr",
+    "native_name": "français",
+    "id": 3
+  },
+  {
+    "name": "Spanish",
+    "code": "es",
+    "native_name": "español",
+    "id": 4
+  },
+  {
+    "name": "Japanese",
+    "code": "ja",
+    "native_name": "日本語",
+    "id": 5
+  }
+]

@@ -1,16 +1,20 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import { Cairo } from "@next/font/google";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import Header from "@/Components/Header";
-import { RiTranslate } from "react-icons/ri";
-import CTA from "@/Components/CTA";
-import HowWork from "@/Components/HowWork";
-import Features from "@/Components/Features";
 import Footer from "@/Components/Footer";
+import Lang from "@/Components/Lang";
+import Word from "@/Components/Word";
+import TranslateWord from "@/Components/TranslateWord";
 
 const cairo = Cairo({ subsets: ["latin"] });
 
 export default function Home() {
+  const [step, setStep]: [number, any] = useState(1);
+  const [lang, setLang]: [string, any] = useState("");
+  const [text, setText]: [string, any] = useState("");
+  console.log(step);
   return (
     <>
       <Head>
@@ -21,9 +25,9 @@ export default function Home() {
       </Head>
       <main className={cairo.className}>
         <Header />
-        <CTA />
-        <HowWork />
-        <Features />
+        <Lang setStep={setStep} setLang={setLang} />
+        {step >= 2 && <Word setText={setText} setStep={setStep} />}
+        {step >= 3 && <TranslateWord lang={lang} text={text} />}
         <Footer />
       </main>
     </>
